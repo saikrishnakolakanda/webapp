@@ -23,7 +23,7 @@
     <h1>Hello, World!</h1>
     <p>This is a simple web page created with front-end code.</p>
 
-    <!-- JavaScript for interactive -->
+    <!-- JavaScript for interactively -->
     <script>
         // JS to add a pop-up alert when the page loads
         alert('Welcome to my web page!');
