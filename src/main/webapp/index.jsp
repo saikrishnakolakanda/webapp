@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Hello, World!</h1>
-    <p>This is a simple web page created with front-end code.</p>
+    <p>This is a simple web page created with front-end code</p>
 
     <script>
         alert('Welcome to my web page!!!');
