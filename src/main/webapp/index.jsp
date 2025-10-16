@@ -22,7 +22,7 @@
     <p>This is a simple web page created with front-end code</p>
 
     <script>
-        alert('Welcome to my web page!!!');
+        alert('Welcome to my web page!!');
     </script>
 </body>
 </html>
