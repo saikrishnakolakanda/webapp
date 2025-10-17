@@ -35,13 +35,8 @@
   <repository>
     <id>nexus</id>
     <name>Nexus Releases</name>
-    <url>http://54.209.210.226:8081/#admin/repository/repositories:mvnproject</url>
+    <url>http://50.19.25.29:8081/repository/mvnproject/</url>
   </repository>
-  <snapshotRepository>
-    <id>nexus</id>
-    <name>Nexus Snapshots</name>
-    <url>http://54.209.210.226:8081/repository/repositories:mvnproject/</url>
-  </snapshotRepository>
 </distributionManagement>
 
 </project>
