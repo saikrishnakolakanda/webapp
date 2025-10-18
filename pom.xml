@@ -1,7 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project ...>
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
@@ -9,10 +6,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>My Web Application</name>
-
   <dependencies>
-    <!-- Example: Servlet API (required for servlets/JSP) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -21,22 +15,35 @@
     </dependency>
   </dependencies>
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.2</version>
-        </plugin>
-    </plugins>
-</build>
-         
-<distributionManagement>
-  <repository>
-    <id>nexus</id>
-    <name>Nexus Releases</name>
-    <url>http://34.228.63.152:8081/repository/mvnproject/</url>
-  </repository>
-</distributionManagement>       
+  <repositories>
+    <repository>
+      <id>nexus</id>
+      <url>http://34.228.63.152:8081/repository/mvnproject/</url>
+    </repository>
+  </repositories>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>nexus</id>
+      <url>http://34.228.63.152:8081/repository/mvnproject/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Nexus Releases</name>
+      <url>http://34.228.63.152:8081/repository/mvnproject/</url>
+    </repository>
+  </distributionManagement>
 </project>
