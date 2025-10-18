@@ -5,6 +5,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- Project coordinates -->
   <groupId>com.example</groupId>
   <artifactId>app</artifactId>
   <version>1.0-SNAPSHOT</version>
@@ -12,24 +13,25 @@
 
   <name>My Web Application</name>
 
-  <!-- ✅ For downloading dependencies -->
+  <!-- ✅ Repositories for downloading dependencies -->
   <repositories>
     <repository>
-      <id>central</id>
-      <url>https://repo1.maven.org/maven2/</url>
+      <id>nexus-group</id>
+      <url>http://34.228.63.152:8081/repository/maven-public/</url>
     </repository>
   </repositories>
 
-  <!-- ✅ For downloading Maven plugins -->
+  <!-- ✅ Repositories for downloading plugins -->
   <pluginRepositories>
     <pluginRepository>
-      <id>central</id>
-      <url>https://repo1.maven.org/maven2/</url>
+      <id>nexus-group</id>
+      <url>http://34.228.63.152:8081/repository/maven-public/</url>
     </pluginRepository>
   </pluginRepositories>
 
   <!-- ✅ Project dependencies -->
   <dependencies>
+    <!-- Jakarta Servlet API (for servlets and JSP support) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -41,15 +43,19 @@
   <!-- ✅ Build plugins -->
   <build>
     <plugins>
+      <!-- WAR plugin for packaging -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.3.2</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
       </plugin>
     </plugins>
   </build>
 
-  <!-- ✅ For uploading built artifacts to Nexus -->
+  <!-- ✅ Distribution Management (for deployment to Nexus) -->
   <distributionManagement>
     <repository>
       <id>nexus</id>
