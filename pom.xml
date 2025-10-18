@@ -35,7 +35,7 @@
   <repository>
     <id>nexus</id>
     <name>Nexus Releases</name>
-    <url>http://50.19.25.29:8081/repository/mvnproject/</url>
+    <url>http://34.228.63.152:8081/repository/mvnproject/</url>
   </repository>
 </distributionManagement>
 
