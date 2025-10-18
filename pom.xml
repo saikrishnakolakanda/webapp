@@ -37,6 +37,6 @@
     <name>Nexus Releases</name>
     <url>http://34.228.63.152:8081/repository/mvnproject/</url>
   </repository>
-</distributionManagement>
+</distributionManagement>       
 
 </project>
