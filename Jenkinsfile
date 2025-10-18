@@ -22,6 +22,17 @@ pipeline {
                 sh 'mvn clean package' // Executes the Maven build command
             }
         }
+
+        stage('Deploy to Tomcat') {
+            steps {
+                // Ensure 'Deploy to Container' plugin is installed in Jenkins
+                // Ensure 'tomcat-credentials' is a Jenkins credential ID (Username with Password) for Tomcat manager
+                // configured with a user having 'manager-script' role in Tomcat's tomcat-users.xml
+                deploy adapters: [tomcat11(credentialsId: 'tomcat-credentials', url: 'http://18.61.69.33:8080/')],
+                        contextPath: 'webapp', // e.g., 'myapp'
+                        war: 'target/*.war' // Adjust if your WAR file name differs
+            }
+        }
     }
 
     post {
