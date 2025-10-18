@@ -1,6 +1,13 @@
 pipeline {
     agent any // Specifies that the pipeline can run on any available agent
 
+    tools {
+        // Defines the Maven and JDK installations to be used.
+        // These names should match the configurations in Manage Jenkins > Global Tool Configuration.
+        maven 'Maven 3.9.11' 
+        // jdk 'JDK 21' 
+    }
+
     stages {
         stage('Checkout Code') {
             steps {
